@@ -27,6 +27,7 @@ return new class extends Migration
             $table->string('fullname')->nullable();
             $table->string('source')->nullable();
             $table->string('maps_link')->nullable();
+            $table->boolean('status')->nullable();
             $table->timestamps();
         });
     }
