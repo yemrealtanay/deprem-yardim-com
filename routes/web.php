@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\HomeController;
+use App\Http\Controllers\InjuredController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -22,3 +23,5 @@ Route::get('/yardim-isteyenler', function () {
 
 Route::redirect('/injured', '/yardim-isteyenler');
 Route::redirect('/help/datatable', '/yardim-isteyenler');
+
+Route::get('/edit/{injured_id}', [InjuredController::class, 'edit']);
